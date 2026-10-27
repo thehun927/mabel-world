@@ -3,6 +3,14 @@
 A sensor-rich physical foundation for Mabel — small nodes that let her perceive
 and act in the house, starting with light.
 
+## Prior work
+
+This repo contains one foundation commit from before the hackathon window
+(Oct 24, 2026): the mabel-world gateway listener, its systemd unit, and this
+README. The board firmware from that phase was never committed and lives
+only on the device. Everything else in this repository was built during
+the Meta AI Developer Hackathon window, Oct 26 - Nov 4, 2026.
+
 ## Node: office-01
 
 DFRobot DFR1154 (ESP32-S3, 8 MB PSRAM) running MicroPython. Reads its LTR-308

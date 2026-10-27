@@ -102,13 +102,13 @@ class StateMachine:
             if not self.quiet:
                 self.quiet = True
                 stmt = self._statement(ts, "liveness", "went_quiet",
-                                       "office-01 went quiet (no observations)")
+                                       "went quiet (no observations)")
             # a gap also resets any pending transition
             self.pending, self.pending_count, self.pending_sum = None, 0, 0
         if self.quiet and stmt is None:
             self.quiet = False
             stmt = self._statement(ts, "liveness", "came_back",
-                                   "office-01 is back, reporting again")
+                                   "is back, reporting again")
         self.last_seen = epoch
 
         b = band_of(als)

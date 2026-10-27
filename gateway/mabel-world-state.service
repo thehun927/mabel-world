@@ -1,0 +1,15 @@
+[Unit]
+Description=mabel-world state layer: observations -> diary statements (office-01)
+After=network.target mabel-world-listener.service
+Wants=mabel-world-listener.service
+
+[Service]
+Type=simple
+User=mabel
+WorkingDirectory=/home/mabel/mabel-world
+ExecStart=/usr/bin/python3 /home/mabel/mabel-world/state.py --follow
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=Fény voice round-trip endpoint (STT -> reply -> house voice render)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/feny-loop
+ExecStart=%h/feny-loop/venv/bin/python %h/feny-loop/loop_server.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target

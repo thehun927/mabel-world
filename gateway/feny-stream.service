@@ -1,0 +1,13 @@
+[Unit]
+Description=feny-stream LAB streaming relay (NOT production feny-loop)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/feny-stream
+ExecStart=%h/feny-loop/venv/bin/python %h/feny-stream/feny_stream_server.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

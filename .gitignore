@@ -2,3 +2,11 @@ observations-*.jsonl
 listener.log
 __pycache__/
 *.pyc
+# --- added Nov 3, 2026: never commit secrets or build output ---
+feny_secrets.h
+build/
+*token*.txt
+meta_api_key.txt
+.env-stream
+stream.jsonl
+brain.json
